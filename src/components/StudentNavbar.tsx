@@ -27,12 +27,42 @@ const StudentNavbar: React.FC<StudentNavbarProps> = ({ activeSection, setActiveS
   };
 
   const navigationItems = [
-    { id: 'dashboard', label: 'Dashboard', icon: BarChart3, onClick: () => setActiveSection('dashboard') },
-    { id: 'chat', label: 'Need a friend?', icon: MessageCircle, onClick: () => setActiveSection('chat') },
-    { id: 'booking', label: 'Book Counsellor', icon: Calendar, onClick: () => navigate('/book-counsellor') },
-    { id: 'books', label: 'Books Hub', icon: BookOpen, onClick: () => navigate('/books') },
-    { id: 'videos', label: 'Videos', icon: Play, onClick: () => navigate('/videos') },
-    { id: 'broadcasts', label: 'Broadcasts', icon: Radio, onClick: () => navigate('/broadcasts') },
+    {
+      id: "dashboard",
+      label: "Dashboard",
+      icon: BarChart3,
+      onClick: () => navigate("/student-dashboard"),
+    },
+    {
+      id: "chat",
+      label: "Need a friend?",
+      icon: MessageCircle,
+      onClick: () => navigate("/chat"),
+    },
+    {
+      id: "booking",
+      label: "Book Counsellor",
+      icon: Calendar,
+      onClick: () => navigate("/book-counsellor"),
+    },
+    {
+      id: "books",
+      label: "Books Hub",
+      icon: BookOpen,
+      onClick: () => navigate("/books"),
+    },
+    {
+      id: "videos",
+      label: "Videos",
+      icon: Play,
+      onClick: () => navigate("/videos"),
+    },
+    {
+      id: "broadcasts",
+      label: "Broadcasts",
+      icon: Radio,
+      onClick: () => navigate("/broadcasts"),
+    },
   ];
 
   return (
@@ -47,11 +77,18 @@ const StudentNavbar: React.FC<StudentNavbarProps> = ({ activeSection, setActiveS
           <div className="hidden md:flex items-center space-x-1">
             {navigationItems.map((item) => {
               const Icon = item.icon;
-              const isActive = activeSection === item.id || 
-                (item.id === 'booking' && window.location.pathname === '/book-counsellor') ||
-                (item.id === 'books' && window.location.pathname === '/books') ||
-                (item.id === 'videos' && window.location.pathname === '/videos') ||
-                (item.id === 'broadcasts' && window.location.pathname === '/broadcasts');
+              const isActive =
+                activeSection === item.id ||
+                (item.id === "booking" &&
+                  window.location.pathname === "/book-counsellor") ||
+                (item.id === "books" &&
+                  window.location.pathname === "/books") ||
+                (item.id === "videos" &&
+                  window.location.pathname === "/videos") ||
+                (item.id === "broadcasts" &&
+                  window.location.pathname === "/broadcasts") ||
+                (item.id === "chat" && window.location.pathname === "/chat")||
+                ( item.id === "dashboard" && window.location.pathname === "/dashboard");
               
               return (
                 <button

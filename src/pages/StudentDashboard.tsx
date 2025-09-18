@@ -1,23 +1,23 @@
-import React, { useState } from 'react';
-import { useAuth } from '../contexts/AuthContext';
-import StudentNavbar from '../components/StudentNavbar';
-import WellbeingTracker from '../components/WellbeingTracker';
-import MotivationalQuotes from '../components/MotivationalQuotes';
-import ChatbotAssistant from '../components/ChatbotAssistant';
-import DailyReflection from '../components/DailyReflection';
-import QuickActions from '../components/QuickActions';
+import React, { useState } from "react";
+import { useAuth } from "../contexts/AuthContext";
+import StudentNavbar from "../components/StudentNavbar";
+import WellbeingTracker from "../components/WellbeingTracker";
+import MotivationalQuotes from "../components/MotivationalQuotes";
+import ChatbotAssistant from "../components/ChatbotAssistant";
+import DailyReflection from "../components/DailyReflection";
+import QuickActions from "../components/QuickActions";
 
 const StudentDashboard: React.FC = () => {
   const { user } = useAuth();
-  const [activeSection, setActiveSection] = useState('dashboard');
+  const [activeSection, setActiveSection] = useState("dashboard");
 
-  if (!user || user.role !== 'student') {
+  if (!user || user.role !== "student") {
     return <div>Access denied</div>;
   }
 
   const renderSection = () => {
     switch (activeSection) {
-      case 'dashboard':
+      case "dashboard":
         return (
           <div className="space-y-8">
             <div className="text-center mb-8">
@@ -34,7 +34,7 @@ const StudentDashboard: React.FC = () => {
                 <WellbeingTracker />
                 <DailyReflection />
               </div>
-              
+
               <div className="space-y-8">
                 <MotivationalQuotes />
                 <QuickActions />
@@ -42,7 +42,7 @@ const StudentDashboard: React.FC = () => {
             </div>
           </div>
         );
-      case 'chat':
+      case "chat":
         return <ChatbotAssistant />;
       default:
         return <div>Section not found</div>;
@@ -51,11 +51,12 @@ const StudentDashboard: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
-      <StudentNavbar activeSection={activeSection} setActiveSection={setActiveSection} />
-      
-      <main className="max-w-7xl mx-auto px-6 py-8">
-        {renderSection()}
-      </main>
+      <StudentNavbar
+        activeSection={activeSection}
+        setActiveSection={setActiveSection}
+      />
+
+      <main className="max-w-7xl mx-auto px-6 py-8">{renderSection()}</main>
     </div>
   );
 };

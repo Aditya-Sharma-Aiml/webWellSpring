@@ -83,30 +83,33 @@ const ChatbotAssistant: React.FC = () => {
     }
 
     try {
-      const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${API_KEY}`, // ✅ env key
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          model: MODEL,
-          messages: [
-            {
-              role: "system",
-              content: "You are an empathetic and supportive AI friend.",
-            },
-            ...messages.map((msg) => ({
-              role: msg.type === "user" ? "user" : "assistant",
-              content: msg.content,
-            })),
-            {
-              role: "user",
-              content: `Mood: ${mood}. Message: ${userMessage.content}`,
-            },
-          ],
-        }),
-      });
+      const response = await fetch(
+        "https://openrouter.ai/api/v1/chat/completions",
+        {
+          method: "POST",
+          headers: {
+            Authorization: `Bearer ${API_KEY}`, // ✅ env key
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            model: MODEL,
+            messages: [
+              {
+                role: "system",
+                content: "You are an empathetic and supportive AI friend.",
+              },
+              ...messages.map((msg) => ({
+                role: msg.type === "user" ? "user" : "assistant",
+                content: msg.content,
+              })),
+              {
+                role: "user",
+                content: `Mood: ${mood}. Message: ${userMessage.content}`,
+              },
+            ],
+          }),
+        }
+      );
 
       const data = await response.json();
       const botReply =
