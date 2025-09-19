@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import StudentNavbar from '../components/StudentNavbar';
+<<<<<<< HEAD
 import { Calendar, Clock, Star, ArrowLeft, CheckCircle } from 'lucide-react';
+=======
+import { Calendar, Clock, Star, ArrowLeft, User, CheckCircle } from 'lucide-react';
+>>>>>>> 78e23f8de1247b7cb9eb7bd8043a2ada8bdd99d5
 
 interface Counsellor {
   id: string;
@@ -20,6 +24,7 @@ const CounsellorBooking: React.FC = () => {
   const [selectedSlot, setSelectedSlot] = useState<string>('');
   const [isBooked, setIsBooked] = useState(false);
 
+<<<<<<< HEAD
 const counsellors = [
   {
     id: '1',
@@ -124,6 +129,50 @@ const counsellors = [
 ];
 
 
+=======
+  const counsellors: Counsellor[] = [
+    {
+      id: '1',
+      name: 'Dr. Sarah Chen',
+      specialty: 'Stress & Anxiety',
+      rating: 4.9,
+      experience: '8 years',
+      description: 'Specializes in cognitive behavioral therapy and mindfulness techniques for managing academic stress.',
+      availability: ['9:00 AM', '11:00 AM', '2:00 PM', '4:00 PM'],
+      imageUrl: 'https://images.pexels.com/photos/5327585/pexels-photo-5327585.jpeg?auto=compress&cs=tinysrgb&w=300'
+    },
+    {
+      id: '2',
+      name: 'Dr. Michael Rodriguez',
+      specialty: 'Career Guidance',
+      rating: 4.8,
+      experience: '12 years',
+      description: 'Helps students navigate career decisions and build confidence in professional development.',
+      availability: ['10:00 AM', '1:00 PM', '3:00 PM', '5:00 PM'],
+      imageUrl: 'https://images.pexels.com/photos/5212317/pexels-photo-5212317.jpeg?auto=compress&cs=tinysrgb&w=300'
+    },
+    {
+      id: '3',
+      name: 'Dr. Emily Johnson',
+      specialty: 'Relationships & Social',
+      rating: 4.9,
+      experience: '6 years',
+      description: 'Focuses on interpersonal relationships, social anxiety, and building healthy connections.',
+      availability: ['9:30 AM', '12:00 PM', '2:30 PM', '4:30 PM'],
+      imageUrl: 'https://images.pexels.com/photos/5327921/pexels-photo-5327921.jpeg?auto=compress&cs=tinysrgb&w=300'
+    },
+    {
+      id: '4',
+      name: 'Dr. David Kim',
+      specialty: 'Academic Pressure',
+      rating: 4.7,
+      experience: '10 years',
+      description: 'Helps students manage academic workload, test anxiety, and develop effective study strategies.',
+      availability: ['8:00 AM', '11:30 AM', '1:30 PM', '6:00 PM'],
+      imageUrl: 'https://images.pexels.com/photos/5212320/pexels-photo-5212320.jpeg?auto=compress&cs=tinysrgb&w=300'
+    }
+  ];
+>>>>>>> 78e23f8de1247b7cb9eb7bd8043a2ada8bdd99d5
 
   const handleBooking = () => {
     setIsBooked(true);
@@ -134,12 +183,21 @@ const counsellors = [
 
   if (isBooked) {
     return (
+<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-blue-100 via-white to-green-500 opacity-95 font-[Poppins]">
         <div className="text-center">
           <CheckCircle className="w-24 h-24 text-green-500 mx-auto mb-6" />
           <h2 className="text-3xl font-semibold text-gray-800 mb-4">Booking Confirmed!</h2>
           <p className="text-gray-600 mb-6">Your anonymous session has been scheduled successfully.</p>
           <div className="bg-white/80 p-6 rounded-2xl shadow-lg max-w-md mx-auto">
+=======
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50 flex items-center justify-center">
+        <div className="text-center">
+          <CheckCircle className="w-24 h-24 text-green-500 mx-auto mb-6" />
+          <h2 className="text-3xl font-light text-gray-800 mb-4">Booking Confirmed!</h2>
+          <p className="text-gray-600 mb-6">Your anonymous session has been scheduled successfully.</p>
+          <div className="bg-white/80 p-6 rounded-xl shadow-lg max-w-md mx-auto">
+>>>>>>> 78e23f8de1247b7cb9eb7bd8043a2ada8bdd99d5
             <h3 className="font-semibold text-gray-800 mb-2">Session Details:</h3>
             <p className="text-gray-600">Counsellor: {selectedCounsellor?.name}</p>
             <p className="text-gray-600">Time: {selectedSlot}</p>
@@ -151,6 +209,7 @@ const counsellors = [
   }
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-blue-100 via-white to-green-500 opacity-95 ">
       <StudentNavbar activeSection="booking" setActiveSection={() => {}} />
       
@@ -160,26 +219,49 @@ const counsellors = [
           <button
             onClick={() => navigate('/student-dashboard')}
             className="flex items-center text-gray-600 hover:text-blue-500 mr-6 transition-all duration-200"
+=======
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
+      <StudentNavbar activeSection="booking" setActiveSection={() => {}} />
+      
+      <main className="max-w-7xl mx-auto px-6 py-8">
+        <div className="flex items-center mb-8">
+          <button
+            onClick={() => navigate('/student-dashboard')}
+            className="flex items-center text-gray-600 hover:text-blue-500 mr-6 transition-colors duration-200"
+>>>>>>> 78e23f8de1247b7cb9eb7bd8043a2ada8bdd99d5
           >
             <ArrowLeft className="w-5 h-5 mr-2" />
             Back to Dashboard
           </button>
           <div>
+<<<<<<< HEAD
             <h1 className="text-4xl font-bold text-gray-800 mb-2 tracking-wide">Book a Counsellor</h1>
             <p className="text-gray-600 text-lg font-semi-bold">Choose a counsellor for anonymous, confidential support</p>
+=======
+            <h1 className="text-3xl font-light text-gray-800 mb-2">Book a Counsellor</h1>
+            <p className="text-gray-600">Choose a counsellor for anonymous, confidential support</p>
+>>>>>>> 78e23f8de1247b7cb9eb7bd8043a2ada8bdd99d5
           </div>
         </div>
 
         {!selectedCounsellor ? (
           <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-6">
             {counsellors.map((counsellor) => (
+<<<<<<< HEAD
               <div key={counsellor.id} className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 hover:scale-[1.02]">
+=======
+              <div key={counsellor.id} className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+>>>>>>> 78e23f8de1247b7cb9eb7bd8043a2ada8bdd99d5
                 <div className="p-6">
                   <div className="flex items-start mb-4">
                     <img
                       src={counsellor.imageUrl}
                       alt="Counsellor"
+<<<<<<< HEAD
                       className="w-20 h-20 rounded-full object-cover mr-4 border-2 border-blue-100"
+=======
+                      className="w-16 h-16 rounded-full object-cover mr-4"
+>>>>>>> 78e23f8de1247b7cb9eb7bd8043a2ada8bdd99d5
                     />
                     <div className="flex-1">
                       <h3 className="text-xl font-semibold text-gray-800 mb-1">{counsellor.name}</h3>
@@ -199,7 +281,11 @@ const counsellors = [
                     </div>
                     <button
                       onClick={() => setSelectedCounsellor(counsellor)}
+<<<<<<< HEAD
                       className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-xl font-medium transition-all duration-200 transform hover:scale-105 shadow-md hover:shadow-lg"
+=======
+                      className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-lg font-medium transition-all duration-200 transform hover:scale-105 shadow-md hover:shadow-lg"
+>>>>>>> 78e23f8de1247b7cb9eb7bd8043a2ada8bdd99d5
                     >
                       Book Session
                     </button>
@@ -215,22 +301,38 @@ const counsellors = [
                 <img
                   src={selectedCounsellor.imageUrl}
                   alt="Counsellor"
+<<<<<<< HEAD
                   className="w-28 h-28 rounded-full object-cover mx-auto mb-4 border-2 border-blue-100"
                 />
                 <h2 className="text-2xl font-bold text-gray-800 mb-2">{selectedCounsellor.name}</h2>
+=======
+                  className="w-24 h-24 rounded-full object-cover mx-auto mb-4"
+                />
+                <h2 className="text-2xl font-semibold text-gray-800 mb-2">{selectedCounsellor.name}</h2>
+>>>>>>> 78e23f8de1247b7cb9eb7bd8043a2ada8bdd99d5
                 <p className="text-blue-600 font-medium">{selectedCounsellor.specialty}</p>
               </div>
 
               <div className="mb-8">
+<<<<<<< HEAD
                 <h3 className="text-lg font-semibold text-gray-800 mb-4">Select a Time Slot</h3>
+=======
+                <h3 className="text-lg font-medium text-gray-800 mb-4">Select a Time Slot</h3>
+>>>>>>> 78e23f8de1247b7cb9eb7bd8043a2ada8bdd99d5
                 <div className="grid grid-cols-2 gap-3">
                   {selectedCounsellor.availability.map((slot) => (
                     <button
                       key={slot}
                       onClick={() => setSelectedSlot(slot)}
+<<<<<<< HEAD
                       className={`p-3 rounded-lg border-2 transition-all duration-200 text-gray-700 font-medium ${
                         selectedSlot === slot
                           ? 'border-blue-500 bg-blue-100 text-blue-700'
+=======
+                      className={`p-3 rounded-lg border-2 transition-all duration-200 ${
+                        selectedSlot === slot
+                          ? 'border-blue-500 bg-blue-50 text-blue-700'
+>>>>>>> 78e23f8de1247b7cb9eb7bd8043a2ada8bdd99d5
                           : 'border-gray-300 hover:border-blue-300 hover:bg-gray-50'
                       }`}
                     >
@@ -241,7 +343,11 @@ const counsellors = [
                 </div>
               </div>
 
+<<<<<<< HEAD
               <div className="bg-blue-50 p-4 rounded-xl mb-6 border-l-4 border-blue-400">
+=======
+              <div className="bg-blue-50 p-4 rounded-xl mb-6">
+>>>>>>> 78e23f8de1247b7cb9eb7bd8043a2ada8bdd99d5
                 <h4 className="font-semibold text-blue-800 mb-2">Privacy Notice</h4>
                 <p className="text-blue-700 text-sm">
                   Your identity will remain completely anonymous. The counsellor will only see your wellness progress and session notes, never your personal information.
@@ -271,4 +377,8 @@ const counsellors = [
   );
 };
 
+<<<<<<< HEAD
 export default CounsellorBooking;
+=======
+export default CounsellorBooking;
+>>>>>>> 78e23f8de1247b7cb9eb7bd8043a2ada8bdd99d5

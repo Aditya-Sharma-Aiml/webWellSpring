@@ -27,7 +27,11 @@ const CounsellorDashboard: React.FC = () => {
   };
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-blue-50  ">
+=======
+    <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-blue-50">
+>>>>>>> 78e23f8de1247b7cb9eb7bd8043a2ada8bdd99d5
       <CounsellorNavbar activeSection={activeSection} setActiveSection={setActiveSection} />
       
       <main className="max-w-7xl mx-auto px-6 py-8">

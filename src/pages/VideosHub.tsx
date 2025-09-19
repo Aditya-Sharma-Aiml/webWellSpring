@@ -28,6 +28,7 @@ const VideosHub: React.FC = () => {
       title: 'Morning Meditation for Students',
       creator: 'Mindful Learning',
       category: 'Meditation',
+<<<<<<< HEAD
       duration: '16:05',
       description: 'Start your day with focus and clarity through this guided meditation designed specifically for students.',
       videoUrl: 'https://www.youtube.com/watch?v=W19PdslW7iw',
@@ -44,10 +45,29 @@ const VideosHub: React.FC = () => {
       videoUrl: 'https://www.youtube.com/watch?v=1XCObQjSHIs',
       thumbnailUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdEoC0szK8N8kToebmvUGoZIQpRjHLMmKUtw&s',
       views: '5.4M'
+=======
+      duration: '10:30',
+      description: 'Start your day with focus and clarity through this guided meditation designed specifically for students.',
+      videoUrl: 'https://example.com/video1',
+      thumbnailUrl: 'https://images.pexels.com/photos/3822622/pexels-photo-3822622.jpeg?auto=compress&cs=tinysrgb&w=400',
+      views: '12.5K'
+    },
+    {
+      id: '2',
+      title: 'Overcoming Study Anxiety',
+      creator: 'Dr. Alex Thompson',
+      category: 'Stress Relief',
+      duration: '15:45',
+      description: 'Learn practical techniques to manage exam stress and study anxiety effectively.',
+      videoUrl: 'https://example.com/video2',
+      thumbnailUrl: 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=400',
+      views: '18.2K'
+>>>>>>> 78e23f8de1247b7cb9eb7bd8043a2ada8bdd99d5
     },
     {
       id: '3',
       title: 'The Science of Motivation',
+<<<<<<< HEAD
       creator: 'Andrew Huberman',
       category: 'Motivation',
       duration: '1:29:02',
@@ -77,10 +97,42 @@ const VideosHub: React.FC = () => {
       videoUrl: 'https://www.youtube.com/watch?v=tTbU5HUXfsc',
       thumbnailUrl: 'https://i.ytimg.com/vi/-RWsAn2qOng/mqdefault.jpg',
       views: '40.4K'
+=======
+      creator: 'Growth Mindset',
+      category: 'Motivation',
+      duration: '12:20',
+      description: 'Discover what drives motivation and how to maintain it during challenging times.',
+      videoUrl: 'https://example.com/video3',
+      thumbnailUrl: 'https://images.pexels.com/photos/3184287/pexels-photo-3184287.jpeg?auto=compress&cs=tinysrgb&w=400',
+      views: '25.7K'
+    },
+    {
+      id: '4',
+      title: 'Effective Study Techniques',
+      creator: 'Study Smart',
+      category: 'Study Tips',
+      duration: '18:15',
+      description: 'Evidence-based study methods that will improve your learning efficiency and retention.',
+      videoUrl: 'https://example.com/video4',
+      thumbnailUrl: 'https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=400',
+      views: '31.4K'
+    },
+    {
+      id: '5',
+      title: 'Building Self-Compassion',
+      creator: 'Wellness Works',
+      category: 'Self-Care',
+      duration: '14:30',
+      description: 'Learn to treat yourself with kindness and develop a healthier relationship with yourself.',
+      videoUrl: 'https://example.com/video5',
+      thumbnailUrl: 'https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=400',
+      views: '9.8K'
+>>>>>>> 78e23f8de1247b7cb9eb7bd8043a2ada8bdd99d5
     },
     {
       id: '6',
       title: '5-Minute Breathing Exercise',
+<<<<<<< HEAD
       creator: 'Saurabh Bothra',
       category: 'Mindfulness',
       duration: '6:32',
@@ -88,6 +140,15 @@ const VideosHub: React.FC = () => {
       videoUrl: 'https://www.youtube.com/watch?v=8TTABLdGCKI',
       thumbnailUrl: 'https://i.ytimg.com/vi/8TTABLdGCKI/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBXvHoyK8zDzAp21ZwYOu3ts92QuA',
       views: '1M'
+=======
+      creator: 'Calm Campus',
+      category: 'Mindfulness',
+      duration: '5:00',
+      description: 'Quick breathing exercise perfect for between classes or during study breaks.',
+      videoUrl: 'https://example.com/video6',
+      thumbnailUrl: 'https://images.pexels.com/photos/3822622/pexels-photo-3822622.jpeg?auto=compress&cs=tinysrgb&w=400',
+      views: '45.1K'
+>>>>>>> 78e23f8de1247b7cb9eb7bd8043a2ada8bdd99d5
     }
   ];
 
@@ -99,26 +160,45 @@ const VideosHub: React.FC = () => {
   });
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-blue-100 via-white to-green-500 opacity-95">
       <StudentNavbar activeSection="videos" setActiveSection={() => {}} />
 
+=======
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
+      <StudentNavbar activeSection="videos" setActiveSection={() => {}} />
+      
+>>>>>>> 78e23f8de1247b7cb9eb7bd8043a2ada8bdd99d5
       <main className="max-w-7xl mx-auto px-6 py-8">
         <div className="flex items-center mb-8">
           <button
             onClick={() => navigate('/student-dashboard')}
+<<<<<<< HEAD
             className="flex items-center text-gray-600 hover:text-blue-600 mr-6 transition-colors duration-200 font-medium"
+=======
+            className="flex items-center text-gray-600 hover:text-blue-500 mr-6 transition-colors duration-200"
+>>>>>>> 78e23f8de1247b7cb9eb7bd8043a2ada8bdd99d5
           >
             <ArrowLeft className="w-5 h-5 mr-2" />
             Dashboard
           </button>
           <div>
+<<<<<<< HEAD
             <h1 className="text-4xl font-bold text-gray-800 mb-2 tracking-tight" style={{ letterSpacing: '0.5px' }}>Videos Hub</h1>
             <p className="text-gray-600 text-lg font-semi-bold">Motivational and educational content for your wellness journey</p>
+=======
+            <h1 className="text-3xl font-light text-gray-800 mb-2">Videos Hub</h1>
+            <p className="text-gray-600">Motivational and educational content for your wellness journey</p>
+>>>>>>> 78e23f8de1247b7cb9eb7bd8043a2ada8bdd99d5
           </div>
         </div>
 
         {/* Search and Filters */}
+<<<<<<< HEAD
         <div className="bg-white/70 backdrop-blur-lg rounded-2xl shadow-lg p-6 mb-8">
+=======
+        <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg p-6 mb-8">
+>>>>>>> 78e23f8de1247b7cb9eb7bd8043a2ada8bdd99d5
           <div className="flex flex-col md:flex-row gap-4">
             <div className="relative flex-1">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -127,18 +207,31 @@ const VideosHub: React.FC = () => {
                 placeholder="Search videos..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
+<<<<<<< HEAD
                 className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-400 focus:border-transparent shadow-sm text-gray-700 placeholder-gray-400 font-medium transition-all duration-200"
               />
             </div>
 
+=======
+                className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              />
+            </div>
+            
+>>>>>>> 78e23f8de1247b7cb9eb7bd8043a2ada8bdd99d5
             <div className="flex space-x-2 overflow-x-auto">
               {categories.map((category) => (
                 <button
                   key={category}
                   onClick={() => setSelectedCategory(category)}
+<<<<<<< HEAD
                   className={`px-4 py-2 rounded-xl whitespace-nowrap transition-all duration-200 text-sm font-medium ${
                     selectedCategory === category
                       ? 'bg-blue-500 text-white shadow-lg'
+=======
+                  className={`px-4 py-2 rounded-lg whitespace-nowrap transition-all duration-200 ${
+                    selectedCategory === category
+                      ? 'bg-blue-500 text-white shadow-md'
+>>>>>>> 78e23f8de1247b7cb9eb7bd8043a2ada8bdd99d5
                       : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                   }`}
                 >
@@ -152,6 +245,7 @@ const VideosHub: React.FC = () => {
         {/* Videos Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredVideos.map((video) => (
+<<<<<<< HEAD
             <div key={video.id} className="bg-white/80 backdrop-blur-lg rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 flex flex-col">
               <div className="relative group">
                 <img
@@ -161,11 +255,23 @@ const VideosHub: React.FC = () => {
                 />
                 <div className="absolute inset-0 bg-black/25 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <Play className="w-12 h-12 text-white animate-pulse" />
+=======
+            <div key={video.id} className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+              <div className="relative">
+                <img
+                  src={video.thumbnailUrl}
+                  alt={video.title}
+                  className="w-full h-48 object-cover"
+                />
+                <div className="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-200">
+                  <Play className="w-12 h-12 text-white" />
+>>>>>>> 78e23f8de1247b7cb9eb7bd8043a2ada8bdd99d5
                 </div>
                 <div className="absolute bottom-2 right-2 bg-black/70 text-white text-xs px-2 py-1 rounded">
                   {video.duration}
                 </div>
               </div>
+<<<<<<< HEAD
 
               <div className="p-6 flex flex-col flex-1 justify-between">
                 <div>
@@ -189,11 +295,37 @@ const VideosHub: React.FC = () => {
                 </div>
 
                 {/* ✅ Watch Video Button */}
+=======
+              
+              <div className="p-6">
+                <div className="mb-3">
+                  <span className="text-xs font-medium text-blue-600 bg-blue-100 px-2 py-1 rounded-full">
+                    {video.category}
+                  </span>
+                </div>
+                
+                <h3 className="text-lg font-semibold text-gray-800 mb-2">{video.title}</h3>
+                <p className="text-gray-600 text-sm mb-2">by {video.creator}</p>
+                <p className="text-gray-700 text-sm leading-relaxed mb-4">{video.description}</p>
+                
+                <div className="flex items-center justify-between text-xs text-gray-500 mb-4">
+                  <span>{video.views} views</span>
+                  <span className="flex items-center">
+                    <Clock className="w-3 h-3 mr-1" />
+                    {video.duration}
+                  </span>
+                </div>
+
+>>>>>>> 78e23f8de1247b7cb9eb7bd8043a2ada8bdd99d5
                 <a
                   href={video.videoUrl}
                   target="_blank"
                   rel="noopener noreferrer"
+<<<<<<< HEAD
                   className="w-full inline-flex justify-center items-center py-3 rounded-xl font-semibold transition-all duration-200 transform hover:scale-105 shadow-md hover:shadow-lg mt-auto bg-gradient-to-r from-fuchsia-300 to-indigo-600 text-white"
+=======
+                  className="w-full bg-purple-500 hover:bg-purple-600 text-white text-center py-3 rounded-lg font-medium transition-all duration-200 transform hover:scale-105 shadow-md hover:shadow-lg flex items-center justify-center"
+>>>>>>> 78e23f8de1247b7cb9eb7bd8043a2ada8bdd99d5
                 >
                   <Play className="w-4 h-4 mr-2" />
                   Watch Video
@@ -206,8 +338,13 @@ const VideosHub: React.FC = () => {
 
         {filteredVideos.length === 0 && (
           <div className="text-center py-12">
+<<<<<<< HEAD
             <Play className="w-16 h-16 text-gray-400 mx-auto mb-4 animate-pulse" />
             <h3 className="text-2xl font-semibold text-gray-600 mb-2">No videos found</h3>
+=======
+            <Play className="w-16 h-16 text-gray-400 mx-auto mb-4" />
+            <h3 className="text-xl font-medium text-gray-600 mb-2">No videos found</h3>
+>>>>>>> 78e23f8de1247b7cb9eb7bd8043a2ada8bdd99d5
             <p className="text-gray-500">Try adjusting your search or category filter</p>
           </div>
         )}
@@ -216,4 +353,8 @@ const VideosHub: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 export default VideosHub;
+=======
+export default VideosHub;
+>>>>>>> 78e23f8de1247b7cb9eb7bd8043a2ada8bdd99d5

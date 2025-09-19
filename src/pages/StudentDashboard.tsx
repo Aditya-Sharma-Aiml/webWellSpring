@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { useAuth } from '../contexts/AuthContext';
 import StudentNavbar from '../components/StudentNavbar';
@@ -73,11 +74,28 @@ const StudentDashboard: React.FC = () => {
   const [activeSection, setActiveSection] = useState('dashboard');
 
   if (!user || user.role !== 'student') {
+=======
+import React, { useState } from "react";
+import { useAuth } from "../contexts/AuthContext";
+import StudentNavbar from "../components/StudentNavbar";
+import WellbeingTracker from "../components/WellbeingTracker";
+import MotivationalQuotes from "../components/MotivationalQuotes";
+import ChatbotAssistant from "../components/ChatbotAssistant";
+import DailyReflection from "../components/DailyReflection";
+import QuickActions from "../components/QuickActions";
+
+const StudentDashboard: React.FC = () => {
+  const { user } = useAuth();
+  const [activeSection, setActiveSection] = useState("dashboard");
+
+  if (!user || user.role !== "student") {
+>>>>>>> 78e23f8de1247b7cb9eb7bd8043a2ada8bdd99d5
     return <div>Access denied</div>;
   }
 
   const renderSection = () => {
     switch (activeSection) {
+<<<<<<< HEAD
       case 'dashboard':
         return (
           <div className="space-y-12">
@@ -143,17 +161,56 @@ const StudentDashboard: React.FC = () => {
             <QuickActions />
           </div>
         );
+=======
+      case "dashboard":
+        return (
+          <div className="space-y-8">
+            <div className="text-center mb-8">
+              <h1 className="text-4xl font-light text-gray-800 mb-2">
+                Welcome to Your Wellness Journey
+              </h1>
+              <p className="text-gray-600 text-lg">
+                How are you feeling today? Let's track your progress together.
+              </p>
+            </div>
+
+            <div className="grid lg:grid-cols-3 gap-8">
+              <div className="lg:col-span-2 space-y-8">
+                <WellbeingTracker />
+                <DailyReflection />
+              </div>
+
+              <div className="space-y-8">
+                <MotivationalQuotes />
+                <QuickActions />
+              </div>
+            </div>
+          </div>
+        );
+      case "chat":
+        return <ChatbotAssistant />;
+>>>>>>> 78e23f8de1247b7cb9eb7bd8043a2ada8bdd99d5
       default:
         return <div>Section not found</div>;
     }
   };
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-blue-100 via-white to-green-500 opacity-95 overflow-x-hidden">
       <StudentNavbar activeSection={activeSection} setActiveSection={setActiveSection} />
       <main className="max-w-7xl mx-auto px-6 py-12">
         {renderSection()}
       </main>
+=======
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
+      <StudentNavbar
+        activeSection={activeSection}
+        setActiveSection={setActiveSection}
+      />
+
+      <main className="max-w-7xl mx-auto px-6 py-8">{renderSection()}</main>
+>>>>>>> 78e23f8de1247b7cb9eb7bd8043a2ada8bdd99d5
     </div>
   );
 };

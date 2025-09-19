@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Flask
 flask-cors
 transformers
@@ -5,3 +6,15 @@ google-generativeai
 python-dotenv
 torch
 
+=======
+flask
+flask-cors
+numpy
+pandas
+scikit-learn
+joblib
+pickle-mixin
+google-generativeai
+torch --index-url https://download.pytorch.org/whl/cpu
+transformers
+>>>>>>> 78e23f8de1247b7cb9eb7bd8043a2ada8bdd99d5
